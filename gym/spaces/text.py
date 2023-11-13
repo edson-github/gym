@@ -54,8 +54,8 @@ class Text(Space[str]):
             min_length <= max_length
         ), f"The min_length must be less than or equal to the max_length, min_length: {min_length}, max_length: {max_length}"
 
-        self.min_length: int = int(min_length)
-        self.max_length: int = int(max_length)
+        self.min_length: int = min_length
+        self.max_length: int = max_length
 
         self._char_set: FrozenSet[str] = frozenset(charset)
         self._char_list: Tuple[str, ...] = tuple(charset)
